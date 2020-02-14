@@ -28,7 +28,9 @@ var menu = [
 ];
 
 const moveCard = {
-  paddingLeft:'450px'
+  paddingLeft:'375px',
+  opacity: 0.80  
+
 };
 
 const useStyles = makeStyles({

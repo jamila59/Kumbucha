@@ -7,15 +7,15 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 
 const moveCard = {
-  paddingLeft:'300px'
+  paddingLeft:'400px',
 };
 
 const useStyles = makeStyles({
   root: {
-    minWidth: 365,
+    minWidth: 360,
     width: '170px',
     marginTop: 100,
-    height: '500px',
+    height: '490px',
   },
   title: {
     fontSize: 14,
@@ -40,11 +40,11 @@ function KambuchaForm() {
             <h3>Employee Order.</h3>
             <TextField id="filled-basic" label="Name" variant="filled" />
             <br/><br/>
-            <h5>Check-In</h5>
             <TextField id="filled-basic" label="Brand" variant="filled" />
-            <br/>
-            <h5>Guests</h5>
+            <br/><br/>
             <TextField id="filled-basic" label="Flavor" variant="filled" />
+            <br/><br/>
+            <TextField id="filled-basic" label="Quantity" variant="filled" />
           </form> 
         </CardContent>
         <CardActions>
