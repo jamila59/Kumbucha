@@ -24,6 +24,12 @@ var menu = [
     brand: 'GTS',
     price: 6,
     flavor: 'Ginger Spice'
+  },
+  {
+    name: 'Kombucha',
+    brand: 'SUJA',
+    price: 4,
+    flavor: 'Pinapple Passionfruit'
   }
 ];
 
@@ -38,7 +44,7 @@ const useStyles = makeStyles({
     minWidth: 450,
     width: '190px',
     marginTop: 100,
-    height: '400px',
+    height: '500px',
   },
   bullet: {
     display: 'inline-block',
