@@ -20,8 +20,8 @@ function Order(props){
     <div className={classes.root}>
       <h3>Name: {props.name}</h3>
       <h3>Brand: {props.brand}</h3>
-      <h3>Price: ${props.price}</h3>
-      <h3>Flavor: {props.flavor}</h3>
+      <h3>Flavor: {props.price}</h3>
+      <h3>Quantity: {props.flavor}</h3>
     </div>
   );
 }

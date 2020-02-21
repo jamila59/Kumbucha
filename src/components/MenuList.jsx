@@ -71,7 +71,7 @@ function MenuList(props) {
     <div style={moveCard}>
       <Card className={classes.root} variant="outlined">
         <CardContent>
-          <h2>What we offer:</h2>
+          <h2>Placed Orders:</h2>
           <hr/>
           {props.menuList.map((ticket, index) =>
             <Order name= {ticket.name}
