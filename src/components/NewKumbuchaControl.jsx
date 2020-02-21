@@ -1,5 +1,5 @@
 import React from 'react';
-import { disconnect } from 'cluster';
+import ConfirmationQuestions from './ConfirmationQuestions';
 
 class NewKumbuchaControl extends React.Component {
 
@@ -8,12 +8,27 @@ class NewKumbuchaControl extends React.Component {
         this.state = { 
             formVisibleOnPage: false
         };
+        this.handleToubleShooting = this.handleToubleShooting.bind(this);
+    }
+    
+
+    handleToubleShooting(){
+        this.setState({formVisibleOnPage: true});
     }
 
     render(){
+        let currentlyVisibleContent = null;
+        if (this.state.formVisibleOnPage){
+            currentlyVisibleContent = <KumbuchaForm/>;
+        } else {
+            currentlyVisibleContent = <ConfirmationQuestions/>;
+        }
         return (
             <div>
+                {currentlyVisibleContent}
             </div>
         );
     }
 }
+
+export default NewKumbuchaControl;
