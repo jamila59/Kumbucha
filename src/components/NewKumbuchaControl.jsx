@@ -1,34 +1,34 @@
 import React from 'react';
 import ConfirmationQuestions from './ConfirmationQuestions';
+import KambuchaForm from './KambuchaForm';
 
 class NewKumbuchaControl extends React.Component {
 
-    constructor(props)  {
-        super(props);
-        this.state = { 
-            formVisibleOnPage: false
-        };
-        this.handleToubleShooting = this.handleToubleShooting.bind(this);
-    }
+  constructor(props)  {
+    super(props);
+    this.state = { 
+      formVisibleOnPage: false
+    };
+    this.handleTroubleshootingConfirmation = this.handleTroubleshootingConfirmation.bind(this);
+  }
     
 
-    handleToubleShooting(){
-        this.setState({formVisibleOnPage: true});
-    }
+  handleTroubleshootingConfirmation(){
+    this.setState({formVisibleOnPage: true});
+  }
 
-    render(){
-        let currentlyVisibleContent = null;
-        if (this.state.formVisibleOnPage){
-            currentlyVisibleContent = <KumbuchaForm/>;
-        } else {
-            currentlyVisibleContent = <ConfirmationQuestions/>;
-        }
-        return (
-            <div>
-                {currentlyVisibleContent}
-            </div>
-        );
-    }
+  render(){
+    let currentlyVisibleContent = null;
+    if (this.state.formVisibleOnPage){
+      currentlyVisibleContent = <KambuchaForm/>;
+    } else {
+      currentlyVisibleContent = <ConfirmationQuestions onTroubleshootingConfirmation={this.handleTroubleshootingConfirmation}/>;    }
+    return (
+      <div>
+        {currentlyVisibleContent}
+      </div>
+    );
+  }
 }
 
 export default NewKumbuchaControl;
