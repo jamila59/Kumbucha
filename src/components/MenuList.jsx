@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Order from './Kambucha';
+import PropTypes from 'prop-types';
 
 
 var menu = [
@@ -63,7 +64,7 @@ const useStyles = makeStyles({
 });
 menu.name;
 
-export default function MenuList() {
+function MenuList(props) {
   const classes = useStyles();
 
   return (
@@ -72,7 +73,7 @@ export default function MenuList() {
         <CardContent>
           <h2>What we offer:</h2>
           <hr/>
-          {menu.map((ticket, index) =>
+          {props.menuList.map((ticket, index) =>
             <Order name= {ticket.name}
               brand={ticket.brand}
               price={ticket.price}
@@ -84,3 +85,10 @@ export default function MenuList() {
     </div>
   );
 }
+
+MenuList.propTypes = {
+  menuList: PropTypes.array
+};
+
+
+export default MenuList;

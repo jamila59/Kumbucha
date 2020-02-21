@@ -1,5 +1,5 @@
 import React from 'react';
-import MenuList from './KambuchaMenu';
+// import MenuList from './MenuList';
 
 
 const backgroundStyle = {
@@ -23,7 +23,6 @@ const backgroundStyle = {
 function FrontPage(){
   return (
     <div style={backgroundStyle}>
-      <MenuList/>
     </div>
   );    
 }

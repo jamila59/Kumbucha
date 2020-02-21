@@ -1,6 +1,7 @@
 import React from 'react';
 import ConfirmationQuestions from './ConfirmationQuestions';
 import KambuchaForm from './KambuchaForm';
+import PropTypes from 'prop-types';
 
 class NewKumbuchaControl extends React.Component {
 
@@ -20,7 +21,7 @@ class NewKumbuchaControl extends React.Component {
   render(){
     let currentlyVisibleContent = null;
     if (this.state.formVisibleOnPage){
-      currentlyVisibleContent = <KambuchaForm/>;
+      currentlyVisibleContent = <KambuchaForm onNewKumbuchaCreation={this.props.onNewKumbuchaCreation}/>;
     } else {
       currentlyVisibleContent = <ConfirmationQuestions onTroubleshootingConfirmation={this.handleTroubleshootingConfirmation}/>;    }
     return (
@@ -30,5 +31,8 @@ class NewKumbuchaControl extends React.Component {
     );
   }
 }
+NewKumbuchaControl.propTypes = {
+  onNewKumbuchaCreation: PropTypes.func
+};
 
 export default NewKumbuchaControl;
